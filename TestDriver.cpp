@@ -6,7 +6,7 @@
 #include "UnsortedList.h"
 
 using namespace std;
-void PrintList(ofstream& outFile, UnsortedList& list);
+void PrintList(ofstream& outFile, UnsortedList<int>& list);
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
 
 	int number;
 	int item;
-	UnsortedList list;
+	UnsortedList<int> list;
 
 	bool found;
 
@@ -121,7 +121,7 @@ void PrintList(ofstream& dataFile, UnsortedList& list)
 	int item;
 	dataFile << "PrintList" << endl;
 	cout << "PrintList: ";
-	list.ResetIterator();	// Sets currentPos = -1
+	list.ResetIterator();	// Start at beginning of list
 	length = list.GetLength();
 	if (length == 0)
 		dataFile << "List is empty.";
